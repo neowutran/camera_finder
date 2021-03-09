@@ -73,8 +73,8 @@ fn check_pattern(
     offset: usize,
 ) -> Result<usize, ()> {
     let mut data = DataMember::<u8>::new(*process_handle);
-    check_value(&mut data, offset - 36, 0x50)?;
-    check_value(&mut data, offset - 35, 0x11)?;
+    check_value(&mut data, offset - 36, 0x40)?;
+    check_value(&mut data, offset - 35, 0x81)?;
     check_value(&mut data, offset - 31, 0x7F)?;
     check_value(&mut data, offset - 23, 0x80)?;
     Ok(offset)
